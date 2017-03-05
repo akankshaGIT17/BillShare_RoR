@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BillShare1</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%= image_tag='rails.png' %>
+  <% if content for? : header %>
+  <%= yield :header %>
+  <% else %>
+  <p> This is Bill sharing app for 3 friends. : By Akanksha</p>
+  <% end %>
+    <%= yield %>
+  </body>
+</html>

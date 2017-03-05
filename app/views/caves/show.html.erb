@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event id:</strong>
+  <%= @cafe.Event_Id %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @cafe.Event %>
+</p>
+
+<p>
+  <strong>Attenddate:</strong>
+  <%= @cafe.AttendDate %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @cafe.location %>
+</p>
+
+<p>
+  <strong>Totalamount:</strong>
+  <%= @cafe.TotalAmount %>
+</p>
+
+<%= link_to 'Edit', edit_cafe_path(@cafe) %> |
+<%= link_to 'Back', caves_path %>

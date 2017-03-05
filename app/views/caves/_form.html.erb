@@ -1,0 +1,42 @@
+<%= form_for(cafe) do |f| %>
+  <% if cafe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cafe.errors.count, "error") %> prohibited this cafe from being saved:</h2>
+
+      <ul>
+      <% cafe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Event_Id %>
+    <%= f.text_field :Event_Id , :disabled => readonly ||=false%>
+  </div>
+
+  <div class="field">
+    <%= f.label :Event %>
+    <%= f.text_field :Event, :disabled => readonly ||=false %>
+  </div>
+
+  <div class="field">
+    <%= f.label :AttendDate %>
+    <%= f.datetime_select :AttendDate , :disabled => readonly ||=false%>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location, :disabled => readonly ||=false %>
+  </div>
+
+  <div class="field">
+    <%= f.label :TotalAmount %>
+    <%= f.text_field :TotalAmount, :disabled => readonly ||=false %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
